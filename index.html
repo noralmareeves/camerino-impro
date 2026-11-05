@@ -1,86 +1,90 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Camerino: practica improvisar antes de salir a escena</title>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camerino: Práctica de Improvisación</title>
 <style>
-:root{--bg:#fbf7f2;--fg:#231f2b;--cd:#fff;--ac:#6b3fa0;--bd:#cfc6d8;--g:#1d7a3f;--y:#8a5a00;--r:#b3261e;--b:#1b5fa8;--fs:18px;--lh:1.5;--ff:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-th=light]):not([data-th=hc]){--bg:#17141d;--fg:#f3eef8;--cd:#231f2d;--ac:#c9a7ff;--bd:#4a4258;--g:#6fd69a;--y:#f0c36a;--r:#ff9a92;--b:#8ec1ff}}
-:root[data-th=dark]{--bg:#17141d;--fg:#f3eef8;--cd:#231f2d;--ac:#c9a7ff;--bd:#4a4258;--g:#6fd69a;--y:#f0c36a;--r:#ff9a92;--b:#8ec1ff}
-:root[data-th=hc]{--bg:#fff;--fg:#000;--cd:#fff;--ac:#000;--bd:#000;--g:#005a1f;--y:#6b4300;--r:#8f0000;--b:#00408a}
-:root[data-ff=easy]{--ff:Verdana,Tahoma,Arial,sans-serif}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:var(--fs)/var(--lh) var(--ff)}
-main,header{max-width:760px;margin:0 auto;padding:12px 16px}
-h1{font-size:1.5em;margin:.3em 0}h2{font-size:1.25em;margin:.4em 0}
-.cd{background:var(--cd);border:2px solid var(--bd);border-radius:14px;padding:14px;margin:12px 0}
-button,select,input{font:inherit;color:var(--fg)}
-button{background:var(--cd);border:2px solid var(--ac);border-radius:12px;padding:12px 16px;min-height:48px;cursor:pointer;margin:4px 4px 4px 0}
-button.pr{background:var(--ac);color:var(--bg)}
-button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible,h2:focus-visible,[data-f]:focus-visible{outline:4px solid var(--b);outline-offset:2px}
-.mv{display:block;width:100%;text-align:left;margin:8px 0}
-.mv small{display:block;opacity:.85}
-.k0{border-color:var(--g)}.k1{border-color:var(--y)}.k2{border-color:var(--r)}.k3{border-color:var(--b)}
-mark{background:#ffe27a;color:#000;padding:0 3px;border-radius:4px}
-.stage{font-size:2.2em;min-height:2.2em;background:var(--cd);border:2px dashed var(--bd);border-radius:14px;padding:8px;text-align:center}
-.stage span{display:inline-block;animation:pop .5s}
-@keyframes pop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
-:root[data-calm=on] .stage span{animation:none}
-@media(prefers-reduced-motion:reduce){.stage span{animation:none}}
-.frz{border-color:var(--r)}
-details{border:2px solid var(--bd);border-radius:12px;padding:8px 12px;background:var(--cd)}
-summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
-label{display:block;margin:8px 0}select,input[type=text]{width:100%;padding:10px;border:2px solid var(--bd);border-radius:10px;background:var(--cd)}
-ul{padding-left:1.2em}
-a.bt{display:inline-block;background:var(--ac);color:var(--bg);border:2px solid var(--ac);border-radius:12px;padding:12px 16px;min-height:48px;text-decoration:none;font-weight:600;margin:4px 4px 4px 0}a.bt:focus-visible{outline:4px solid var(--b);outline-offset:2px}
-</style></head><body>
-<header><details><summary>⚙️ Ajusta el juego a ti</summary>
-<p>Cambia lo que necesites. No tienes que explicar por qué.</p>
-<label>Tamaño de letra<select data-s="fs"><option value="18px">Normal</option><option value="22px">Grande</option><option value="27px">Muy grande</option></select></label>
-<label>Espacio entre líneas<select data-s="lh"><option value="1.5">Normal</option><option value="1.9">Amplio</option></select></label>
-<label>Contraste<select data-s="th"><option value="auto">Normal</option><option value="hc">Alto</option><option value="dark">Modo oscuro</option></select></label>
-<label>Tipo de letra<select data-s="ff"><option value="std">Estándar</option><option value="easy">Lectura fácil</option></select></label>
-<label>Audio (lee las ofertas en voz alta)<select data-s="audio"><option value="off">Desactivado</option><option value="on">Activado</option></select></label>
-<label>Modo calmo (sin animaciones)<select data-s="calm"><option value="off">Desactivado</option><option value="on">Activado</option></select></label>
-<label>Tiempo del reto relámpago<select data-s="tiempo"><option value="15">15 segundos</option><option value="30">30 segundos</option><option value="0">Sin tiempo</option></select></label>
-<label>Respuestas del personaje<select data-s="ia"><option value="on">Con IA (si está disponible)</option><option value="off">Preparadas, sin IA</option></select></label>
-<label>Nivel de apoyo<select data-s="apoyo"><option value="mucho">Mucho: frase sugerida</option><option value="poco">Poco: solo el inicio</option><option value="nada">Ninguno</option></select></label>
-<button data-a="reset">Volver a lo normal</button></details></header>
-<main id="app"></main>
+body { font-family: system-ui, sans-serif; background: #fbf7f2; color: #231f2b; max-width: 700px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+.cd { background: #fff; border: 2px solid #cfc6d8; border-radius: 12px; padding: 16px; margin: 12px 0; }
+button { font: inherit; background: #fff; border: 2px solid #6b3fa0; border-radius: 10px; padding: 12px 16px; cursor: pointer; margin: 6px 0; display: block; width: 100%; text-align: left; }
+button.pr { background: #6b3fa0; color: #fff; text-align: center; }
+input[type="text"] { width: 100%; padding: 12px; border: 2px solid #cfc6d8; border-radius: 10px; font: inherit; margin: 8px 0; box-sizing: border-box; }
+</style>
+</head>
+<body>
+
+<h1>Camerino</h1>
+<p>Práctica de improvisación actoral antes de salir a escena.</p>
+<div id="app"></div>
+
 <script>
-const MV=["Sí, y…","Sí, pero…","No","Pregunta"],IC=["⬆️","⚖️","✋","❓"],ST=["Aceptas y sumas algo tuyo","Aceptas con una duda o condición","Rechazas la oferta","Devuelves la pelota con una pregunta"];
-const C=[
-{n:"La llave del faro",w:"Marta",r:"En este faro, los objetos cotidianos guardan secretos de quienes los usaron.",d:"Vecina entusiasta que lo exagera todo",l:"El pasillo de un faro",s:"Dos vecinos, el pasillo de un faro, una llave que nadie debería tener.",t:[
-{o:"¡Por fin encontré la llave del faro! ¡Estaba dentro de mi sombrero!",p:["llave","sombrero"],m:[["¡Sí! Y dentro del sombrero también hay un mapa.","¡UN MAPA! ¡Lo sabía! Está cosido al forro y tiene una cruz roja.","🎩🗺️"],["Sí, la encontraste, pero parece muy vieja.","Tienes razón, está oxidada. Pero algo abrirá, seguro.","🗝️"],["No, esa llave no es del faro.","…Ah. Entonces me quedo con mi sombrero.","🎩"],["¿Y qué más guardas en ese sombrero?","¡Buena pregunta! Ahora que lo dices… algo se mueve ahí dentro.","🎩❓"]]},
-{o:"Mira, la llave brilla. Nunca había visto una que brille cuando le hablo.",p:["brilla","le hablo"],m:[["Sí, y brilla más cuando nos acercamos a la puerta.","¡Es una brújula! ¡La llave nos guía! ¡Sigue la luz!","✨🚪"],["Sí, brilla, pero parpadea como si se cansara.","Es verdad… ¡Hay que darse prisa, o la llave se duerme!","💡"],["Las llaves no brillan.","Pues esta sí. Bueno… brillaba.","🗝️"],["¿Qué te dijo la llave cuando le hablaste?","¡Me dijo «más a la izquierda»! ¿Tú qué crees que quiso decir?","⬅️"]]},
-{o:"Se oye algo detrás de la puerta. ¡Está respirando!",p:["detrás de la puerta","respirando"],m:[["Sí, y creo que tiene miedo. Hay que hablarle bajito.","(susurra) Hola… somos amigas. Una voz responde: «¡Por fin!»","🚪🔦"],["Sí, respira, pero quizá es solo el viento.","¿El viento? El viento no tose.","😮‍💨"],["No, no hay nadie ahí.","Ah… entonces nos vamos. Fin de la historia.","🌑"],["¿Quién eres? ¿Qué haces ahí dentro?","No contesta, pero siento que sonríe.","💌"]]}]},
-{n:"El bus de las horas",w:"Baltasar",r:"En este bus el tiempo se vende por piezas: horas, ayeres, silencios. Todo tiene su precio y su historia.",d:"Vendedor que sube a un bus interprovincial y ofrece cosas que no se tocan",l:"Un bus interprovincial nocturno",s:"Un bus nocturno, una hora de sobra a la venta, una última parada.",t:[
-{o:"¡Pasen, pasen, mis panas! Vendo una hora de sobra a una lata. Se usa una sola vez y no hay devoluciones.",p:["hora de sobra","una sola vez"],m:[["¡La compro! Y la uso para ver el amanecer desde el bus.","¡Cliente con visión! El amanecer va incluido en el precio.","🌅"],["La compro, pero ¿cómo sé que es una buena hora?","Se nota: pasa despacito. Escuche.","⏳"],["Las horas no se venden.","Hmm… entonces me quedo con mi hora. Se me va a pasar.","🕰️"],["¿Dónde se guarda una hora de sobra?","En el bolsillo izquierdo, donde van las cosas que uno olvida.","🧥"]]},
-{o:"También vendo ayeres, a dos latas. Este es de un martes tranquilo. Está usado, pero le doy la yapa de un mañana.",p:["ayeres","martes tranquilo","usado"],m:[["Me lo llevo. Y le sumo mi mañana para que hagan juego.","¡Un conjunto completo! Nadie me había comprado el ayer con su mañana.","📅📅"],["Quiero un ayer, pero uno sin lluvia.","Déjeme buscar… Este solo tiene una llovizna chiquita.","🌦️"],["Lo que ya pasó no sirve de nada.","Eso dicen todos. Y luego vuelven a buscarlo.","📄"],["¿Qué pasó en ese martes?","Nada. Por eso es tan valioso.","☀️"]]},
-{o:"Llegamos a la última parada, chuta. Me quedó un silencio sin vender. Se lo dejo de yapa; es suyo si lo quiere.",p:["última parada","silencio sin vender","es suyo"],m:[["Lo acepto. Y lo comparto con todo el bus.","¡Qué generosidad! Mire, hasta los pasajeros dormidos sonríen.","🤫😊"],["Lo acepto, pero solo hasta que bajemos del tren.","Trato hecho. Dura exactamente hasta la puerta.","🚪"],["No quiero silencio. Prefiero ruido.","Entendido. Se lo dejo para otro viaje: los silencios esperan bien.","🧳"],["¿A qué suena un silencio sin vender?","Suena a que alguien está a punto de decir algo importante.","〰️"]]}]},
-{n:"La vendedora de La Bahía",w:"Lía",r:"En este puesto de La Bahía lo imposible es mercancía normal: se corta, se pesa y se regatea como cualquier fruta.",d:"Vendedora de La Bahía que vende cosas imposibles con total seriedad",l:"Un puesto en La Bahía, en Guayaquil",s:"Un puesto de La Bahía, una nube a la venta, una tormenta que se acerca.",t:[
-{o:"¡Última nube del día, mi vida! Recién cortada, a cinco latas. Solo queda una, así que decídete rápido, que te la dejo con yapa.",p:["Última nube","rápido"],m:[["¡Me la llevo! Y también quiero un trocito de arcoíris.","¡Eso lo guardo para clientes de confianza! Pero hoy te lo dejo en oferta.","☁️🌈"],["Quiero la nube, pero no tengo dónde guardarla.","Tengo frascos grandes. Eso sí, no le des la espalda.","🫙"],["Las nubes no se venden.","Hmm… entonces cerraré el puesto.","⛺"],["¿Cómo se corta una nube?","¡Con tijeras de lluvia! Pero cuidado, cada corte llora un poquito.","✂️💧"]]},
-{o:"Esta nube tiene nombre: Gertrudis. Y no se va con cualquiera.",p:["tiene nombre","no se va con cualquiera"],m:[["Mucho gusto, Gertrudis. Siempre llevo un paraguas para que no te mojes.","¡Ay, le gustas! Mira cómo se pone rosada.","☁️🩷"],["Claro, pero ¿cómo sé que me elige a mí?","Te elige si la haces reír. Prueba.","😄"],["Las nubes no tienen nombre.","Gertrudis se ofendió. Mira.","🌫️"],["¿Qué le gusta a Gertrudis?","Los cuentos, las rimas y que le canten bajito.","📖"]]},
-{o:"Se acerca la tormenta. Gertrudis dice que se va contigo… pero tiene una condición.",p:["tormenta","se va contigo","condición"],m:[["Acepto. Y le prometo que le enseñaré a ver el mar.","¡Eso era justo lo que quería!","🌊☀️"],["Acepto, pero necesito saber cuál es la condición.","Que la lleves hasta donde llueve de verdad.","🗺️💧"],["No quiero ninguna condición.","Entonces Gertrudis volverá al cielo sola.","⬆️"],["¿Y cuál es la condición?","Que no la apures. Gertrudis tarda en decidir.","⏰"]]}]},
-{n:"La sala de espera del Seguro",w:"Inés",r:"En esta sala esperar es una forma de avanzar: las puertas se abren cuando alguien se anima.",d:"Muy tímida: habla casi susurrando y se disculpa por todo",l:"La sala de espera de un centro del Seguro",s:"La sala de espera del Seguro, un turno que nunca llaman, una puerta que se abre sola.",t:[
-{o:"Disculpa… ¿tú también tienes el turno cero? Nadie lo ha llamado nunca.",p:["turno cero","Nadie lo ha llamado nunca"],m:[["Sí, y creo que hoy lo van a llamar. Por eso vine temprano.","¡Qué valiente! Yo llevo aquí desde antes de que existiera esta sala.","0️⃣📺"],["Sí, tengo el cero, pero quizá es un error de impresión.","Puede ser… pero la impresora se veía muy segura.","🧾"],["No, ese número no existe.","Ah… perdón. Entonces me siento… en silencio.","🪑"],["¿Qué pasa cuando llaman al cero?","Dicen que se abre una puerta. Nadie sabe a dónde lleva.","🚪"]]},
-{o:"La pantalla acaba de parpadear. ¿Eso fue un ding? Creo que fue un ding.",p:["parpadear","ding"],m:[["Sí, y sonó más fuerte cuando nos miró.","¡Nos miró! Nunca me habían mirado… ¿Tengo que ponerme de pie?","👀"],["Sí, sonó, pero quizá venía de otra sala.","Es posible. Aquí los dings viajan.","🔔"],["No sonó nada.","Qué raro. Yo lo sentí en la silla.","🪑"],["¿Qué haces tú cuando suena?","Me quedo muy quieta, por si acaso. ¿Tú qué harías?","🤔"]]},
-{o:"Se abrió una puerta al fondo. Dice «Sala de los que se animaron». ¿Entramos juntas?",p:["puerta al fondo","se animaron","Entramos juntas"],m:[["Sí, y avisemos a los demás. Aquí hay mucha gente esperando.","¡Tienes razón! Vamos todos. Yo avanzo, tú me sigues.","🚪🧑‍🤝‍🧑"],["Sí, entremos, pero despacito.","Despacito es mi velocidad favorita.","🐢"],["No, prefiero seguir esperando.","Está bien. Te guardo el sitio.","💺"],["¿Qué crees que hay adentro?","Creo que hay una silla con tu nombre… o con el mío.","💡"]]}]},
-{n:"El botón rojo",w:"Tita",r:"En este museo, cada botón prohibido activa una sorpresa que alguien escondió con cariño.",d:"Imprudente total: toca primero y piensa después",l:"La sala de control de un museo cerrado",s:"Una sala de control, un botón prohibido, alguien que no sabe esperar.",t:[
-{o:"¡Mira, un botón rojo que dice NO TOCAR! Yo lo toco primero y pienso después.",p:["botón rojo","NO TOCAR","toco primero"],m:[["Sí, y yo sostengo la cuerda por si algo cae.","¡Equipo! Tú la cuerda, yo el botón. A la una, a las dos…","🪢🔴"],["Sí, tócalo, pero con mucho cuidado.","¿Cuidado? Bueno, lo toco con un solo dedo. Un dedito prudente.","☝️"],["No, no lo toques.","¡Uy, me frenaste justo a tiempo! Bueno… casi.","🔴"],["¿Qué crees que hace?","¡Ni idea! Por eso hay que tocarlo. ¡Es ciencia!","🔬"]]},
-{o:"Se abrió una compuerta. Voy a meter la mano, seguro es un premio.",p:["compuerta","meter la mano","premio"],m:[["Sí, y llevo una linterna para ver el premio.","¡Buena idea! A ver… ¡hay un pingüino de peluche gigante!","🔦🐧"],["Sí, pero mira primero qué hay dentro.","Mirar es de gente lista… Mira tú, yo me asomo desde atrás.","🙈"],["No, puede ser peligroso.","¿Peligroso? ¿Tú crees? Bueno, miro solo con un ojo.","👁️"],["¿Y si el premio no es para nosotros?","¡Buena pregunta! Hay una etiqueta, pero me da pereza leerla. ¿La lees tú?","🏷️"]]},
-{o:"Ups. Creo que acabo de decir en voz alta el secreto del museo. ¡Todos me oyeron!",p:["secreto del museo","Todos me oyeron"],m:[["Sí, y ahora hacemos como si fuera un show planeado.","¡Genial! ¡Que parezca un espectáculo! ¡Sonrían!","👏🎭"],["Sí, pero ya no es secreto. ¿Qué hacemos?","Lo convertimos en el secreto de todos. Suena mejor, ¿no?","🎉"],["No, nadie oyó nada.","Menos mal… aunque aquel señor ya está tomando nota.","📝"],["¿Qué secreto dijiste?","Que el pingüino no es de peluche. Ups.","🐧👀"]]}]},
-{n:"La tienda de doña Rosa",w:"Doña Rosa",r:"En esta tienda no se paga con dinero sino con favores y cuentos, y doña Rosa lleva la cuenta de todos en su libreta.",d:"Tendera de barrio que anota cada favor con lápiz",l:"Una tienda de barrio en Guayaquil",s:"Una tienda de barrio, una libreta de favores, alguien que viene a pagar una deuda muy antigua.",t:[
-{o:"Buenos días, mijo. Aquí tengo su cuenta: usted me debe un favor desde el invierno pasado, y eso no se paga con latas.",p:["cuenta","un favor","invierno pasado"],m:[["Es verdad, y vengo a pagarlo. Le traje pan para toda la cuadra.","¡Qué detalle! Con eso salda el favor y además se gana otro de mi parte.","🥖📒"],["Es verdad, pero no recuerdo cuál era el favor.","Con calma, lo anoté aquí: era cuidar mi tienda un domingo. Todavía hay tiempo.","📒"],["Yo no le debo nada.","Está bien, lo anoto con lápiz, por si cambia de opinión.","✏️"],["¿Qué otros favores hay en esa libreta?","Muchos. Doña Carmen debe una serenata y el señor del taxi, un secreto.","📖"]]},
-{o:"Hoy se paga con cuentos, mijo. Por un cuento le doy un cafecito, y si es de miedo, le doy de yapa el pan.",p:["cuentos","cafecito","de miedo"],m:[["Trato hecho. Y mi cuento pasa en esta misma tienda.","¡Ay, me encanta! Cuente, que justo la tienda estaba escuchando.","🏪👂"],["Acepto, pero no me sé ningún cuento completo.","Con la mitad alcanza. La otra mitad la pone quien escucha.","📚"],["Los cuentos no valen como dinero.","Aquí valen más. El dinero se gasta; un cuento se queda.","💬"],["¿Cuál es el cuento que más ha cobrado?","Uno de un gato que presidía la junta del barrio. Con eso pagó medio año de pan.","🐱"]]},
-{o:"Ayayay, escuche: afuera suena la música del barrio. Hoy es feriado y vienen todos a cobrar y a pagar favores.",p:["música del barrio","feriado","cobrar y a pagar"],m:[["Sí, y abramos la tienda a la calle para que todos entren.","¡Eso! Que pasen todos. Hoy la libreta se queda sin deudas.","🎶🎉"],["Sí, la oigo, pero la fila va a ser larguísima.","Que sea larga: así hay más conversación.","🚶🚶"],["Prefiero quedarme en casa.","Bien, le guardo el sitio en la fila. Los favores esperan.","🏠"],["¿Y quién es el primero de la lista?","Usted. La libreta lo anotó primero.","⭐📒"]]}]},
-{n:"El parque de las iguanas",w:"Chela",r:"En este parque las iguanas son las vecinas más antiguas: llevan siglos mirando y lo recuerdan todo.",d:"Guía de parque muy seria que presenta a las iguanas como personas importantes",l:"Un parque con iguanas en el centro de Guayaquil",s:"Un parque con iguanas, una guía muy seria, una iguana que sabe algo que nadie recuerda.",t:[
-{o:"Bienvenidos al parque, mis panas. Les presento a doña Iguana, la más antigua. Ella estuvo aquí antes que la ciudad.",p:["doña Iguana","la más antigua","antes que la ciudad"],m:[["Mucho gusto, doña Iguana. Y traje hojas de su postre favorito.","¡Eso la conquista! Mire cómo mueve la cola: le cae bien.","🦎🍃"],["Mucho gusto, pero no parece tener tantos años.","Las iguanas envejecen por dentro. Mírele los ojos.","👁️"],["Las iguanas no hablan ni recuerdan nada.","Puede ser. Pero ella lleva siglos mirando y no se ofende fácil.","🦎"],["¿Qué ha visto doña Iguana desde su rama?","Todo: bodas, discusiones, partidos. Dice que lo mejor son los helados que se caen.","🍦"]]},
-{o:"Doña Iguana dice que hoy va a llover, y ella nunca se equivoca. Mire cómo bajó del árbol.",p:["va a llover","nunca se equivoca","bajó del árbol"],m:[["Sí, y tengo un paraguas grande para compartir con todos.","¡Perfecto! Los visitantes se meten debajo y el parque se llena de colores.","☔🦎"],["Sí, va a llover, pero el cielo está despejado.","Las iguanas no miran el cielo, huelen el aire. Huela usted también.","🌤️"],["No va a llover hoy.","Ojalá. Si se equivoca, doña Iguana lo anota como su primera vez.","🌧️"],["¿Cómo sabe ella cuándo llueve?","Por la humedad en la piel y porque las hormigas se van. Mire, ya se van.","🐜"]]},
-{o:"Doña Iguana movió la cabeza. Quiere contarnos el secreto del parque, pero solo a dos personas.",p:["movió la cabeza","secreto del parque","dos personas"],m:[["Sí, y lo guardamos para contarlo cuando alguien lo necesite.","¡Así funciona un secreto bueno: se cuenta cuando hace falta!","🤝🦎"],["Sí, pero ¿cómo sabemos si dice la verdad?","Las iguanas no mienten: solo se demoran. Esperemos.","⏳"],["No, mejor que se lo cuente a otras personas.","Qué amable. Doña Iguana lo toma como un sí… para después.","🦎💤"],["¿Cuál es el secreto?","Que el parque no es de la ciudad: la ciudad es del parque. Eso dice ella.","🌳🏙️"]]}]}
+const C = [
+  { n: "La llave del faro", w: "Marta", r: "En este faro, los objetos cotidianos guardan secretos.", s: "Dos vecinos, el pasillo de un faro, una llave que nadie debería tener.", o: "¡Por fin encontré la llave del faro! ¡Estaba dentro de mi sombrero!" },
+  { n: "El bus de las horas", w: "Baltasar", r: "En este bus el tiempo se vende por piezas.", s: "Un bus nocturno, una hora de sobra a la venta.", o: "¡Pasen, pasen, mis panas! Vendo una hora de sobra a una lata." },
+  { n: "La vendedora de La Bahía", w: "Lía", r: "En este puesto de La Bahía lo imposible se vende como fruta.", s: "Un puesto en La Bahía, una nube a la venta.", o: "¡Última nube del día, mi vida! Recién cortada, a cinco latas." }
 ];
-const K=(n,w,r,d,l,s,os,rx,em)=>({n,w,r,d,l,s,t:os.map(o=>({o,p:[],m:[["Sí, y además tengo algo para esto.",rx[0],em[0]],["Sí, pero me da un poco de duda.",rx[1],em[1]],["No, eso no me convence.",rx[2],em[2]],["¿Por qué dices eso?",rx[3],em[3]]]}))});
-[["El taxista que ya sabe","Don Julio","En este taxi el taxista sabe tu destino antes que tú, y la ciudad se acomoda a lo que van conversando.","Taxista tranquilo que adivina a dónde vas, pero nunca te lo dice","Un taxi en una avenida de Guayaquil","Un taxi, un destino que nadie dijo, un taxista que ya sabe.",["Buenas, pana. No me diga a dónde va, yo ya sé, y la carrera sale en tres latas.","Doble aquí, que por esta calle la ciudad hoy está distinta.","Llegamos. malignancies Pero no es donde pidió, es donde necesita."],["¡Eso! Ahora sí vamos por buen camino.","Puede ser… vamos despacio y vemos.","Ya, ya, no se enoje. Doy la vuelta, el taxi aguanta.","Buena pregunta. Yo manejo, usted decide el resto."],["🚕✨","🚕","🚕🛑","🚕❓"]],
-["El carrito de agua de coco","Doña Mery","En este carrito cada coco trae un consejo escondido, y quien lo toma lo entiende justo cuando lo necesita.","Vende agua de coco y un consejo con cada vaso","Un carrito de agua de coco junto a un parque","Un carrito de coco, un consejo escondido, alguien con mucha sed.",["Fresquito el cocito, a una lata, mijo. Y hoy trae un consejo de yapa, ¿se lo abro?","Escuche lo que dice el coco: dice que usted ya sabe qué hacer.","Ya se terminó el agua, pero el consejo todavía no. Le doy la yapa de otro vasito. ¿Qué hacemos?"],["¡Qué bien! Con esa idea el coco queda más rico.","Mmm, puede ser… probemos con una pajita más.","Ay, no pasa nada. Si no le gusta, el coco espera.","Buena pregunta. Pregúntele al coco, que escucha."],["🥥✨","🥥","🥥🧊","🥥❓"]],
-["Se fue la luz","Don Pepe","En esta oscuridad, lo que se dice en voz alta se vuelve verdad por un rato.","Vecino que convierte cada apagón en una reunión","El pasillo de un edificio sin luz","Un pasillo sin luz, una vela, vecinos que no se conocían.",["¡Se fue la luz, qué ruina! Tranquilos, panas, yo tengo una vela y una idea.","Mire cómo se ven las caras con una sola llama.","La luz ya volvió… pero nadie quiere moverse. ¿Y ahora?"],["¡Eso! La oscuridad ya sirve para algo.","Puede ser… pero hablemos bajito, por si acaso.","Bueno, entonces esperamos juntos hasta que vuelva.","Buena pregunta. La vela dice que sigamos hablando."],["🕯️✨","🕯️","🕯️🌑","🕯️❓"]],
-["La peluquería del barrio","Doña Sonia","En esta peluquería cada corte quita algo más que pelo: un mal rato, una preocupación o un recuerdo pesado.","Peluquera que corta el mal humor además del cabello","Una peluquería de barrio","Una peluquería de barrio, un espejo que escucha, un mal humor que se va con el corte.",["Siéntese, mijo. El corte son cinco latas y el mal rato va de yapa. ¿Qué le cortamos hoy: el pelo o el mal rato?","Cierre los ojos. Tijera va… y ya se cayó una preocupación.","Mírese en el espejo. Hay alguien que lo está esperando."],["¡Ay, eso me encanta! Ahora el espejo sonríe.","Puede ser… una puntita no más, para probar.","Está bien, no corto nada. El espejo espera.","Buena pregunta. Ese espejo ha visto de todo."],["✂️✨","✂️","✂️🪞","✂️❓"]],
-["La l
+
+let G = { scr: "home", c: 0, log: [] };
+
+function draw() {
+  let h = "";
+  if (G.scr === "home") {
+    h += "<h2>Elige un espacio para ensayar:</h2>";
+    C.forEach((x, i) => {
+      h += `<button onclick="start(${i})"><strong>${x.n}</strong> — con ${x.w} (${x.l || 'Guayaquil'})</button>`;
+    });
+  } else if (G.scr === "play") {
+    let sc = C[G.c];
+    h += `<h2>${sc.n} (${sc.w})</h2>`;
+    h += `<div class="cd"><strong>Situación:</strong> ${sc.s}</div>`;
+    h += `<div class="cd" style="background:#f3eef8;"><strong>${sc.w}:</strong> "${sc.o}"</div>`;
+    
+    if (G.log.length > 0) {
+      h += `<div class="cd" style="border-color:#1d7a3f;"><strong>Tú:</strong> "${G.log[G.log.length-1].user}"<br><br><strong>${sc.w}:</strong> "${G.log[G.log.length-1].ai}" ✨</div>`;
+      h += `<button class="pr" onclick="resetGame()">← Elegir otra escena</button>`;
+    } else {
+      h += `<p>Escribe tu respuesta de improvisación:</p>`;
+      h += `<input type="text" id="userTxt" placeholder="Ej: Sí, y además traje una cuerda...">`;
+      h += `<button class="pr" onclick="sendText()">Responder a ${sc.w}</button>`;
+      h += `<button onclick="resetGame()" style="margin-top:10px;">← Volver</button>`;
+    }
+  }
+  document.getElementById("app").innerHTML = h;
+}
+
+function start(i) {
+  G.c = i;
+  G.scr = "play";
+  G.log = [];
+  draw();
+}
+
+function sendText() {
+  let txt = document.getElementById("userTxt").value.trim();
+  if (!txt) return;
+  
+  let sc = C[G.c];
+  let respuestasIA = [
+    "¡Eso mismo, pana! Dímelo otra vez con más confianza, que la escena va cogiendo cuerpo.",
+    "De ley, mijo. Eso no me lo esperaba, pero me gusta cómo suena.",
+    "¡Ayayay! Con eso que dices, la historia da un giro total.",
+    "Full bacán lo que propones. Sigue por esa línea, que te sigo el juego."
+  ];
+  let aiReply = respuestasIA[Math.floor(Math.random() * respuestasIA.length)];
+  
+  G.log.push({ user: txt, ai: aiReply });
+  draw();
+}
+
+function resetGame() {
+  G.scr = "home";
+  G.log = [];
+  draw();
+}
+
+draw();
+</script>
+
+</body>
+</html>
